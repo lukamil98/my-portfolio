@@ -1,0 +1,14 @@
+$mainColor:rgb(2, 66, 149);
+$NavbarBgColor:rgb(188, 231, 246);
+$mainBgColor:rgb(227, 232, 251);
+$mainBgColor2: rgb(215, 248, 234);
+$mainBgColor3: rgb(237, 248, 219);
+$mainBgColor4: rgb(248, 232, 224);
+
+$width: 768px;
+
+@mixin mobile {
+    @media (max-width: #{$width}){
+        @content
+    }
+}

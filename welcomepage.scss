@@ -1,0 +1,40 @@
+@import "../../global.scss";
+
+.Welcome-page{
+    background-color: $mainBgColor;
+    .wrapper{
+    color: $mainColor;
+    font-size: 24px;
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+     @include mobile{
+        font-size: 18px;
+        }
+    }
+}
+.welcomebutton{
+    margin-top: 10px;
+    background-color: $mainColor;
+    color: $mainBgColor;
+    font-size: 20px;
+    padding: 10px 25px;
+    cursor: pointer;
+    border: 1px $mainColor;
+    transition: all 0.7s ease;
+    display: inline-flex;
+}
+
+.welcomebutton:hover{
+    background-color: rgb(57, 192, 255);
+    color: $mainColor ;
+    transition: all 0.7s ease;
+}
+
+.icon{
+    padding: 3px 0 0 7px;
+}

@@ -1,0 +1,172 @@
+@import "../../global.scss";
+
+.about {
+    background-color: $mainBgColor2;
+    color: $mainColor;
+    overflow: hidden;
+}
+
+
+.titleabout{
+    text-align: center;
+    justify-content: center;
+    text-decoration: underline;
+    position: inherit;
+}
+
+.cards-div{
+    width: 100%;
+    margin-top: 4rem;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    display: flex;
+        @media only screen and (max-width: 1120px) {
+  .cards-div{
+    margin-top: 2rem;
+  } 
+}
+     @include mobile{
+        margin-top: 1rem;
+         flex-wrap: wrap;
+    }
+   
+}
+.card{
+    width: 400px;
+    height: auto;
+    box-sizing: border-box;
+    float: left;
+    text-align: center;
+    justify-content: center;
+    margin-left: -25px;
+    margin-right: -25px;
+    padding-left: 50px;
+    padding-right: 50px;
+    
+   @include mobile{
+    width: 50%;
+    margin-left: -10px;
+    margin-right: -10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    }
+}
+
+.hexagon{
+    background-color: #6C6;
+    width: 120px;
+    height: 120px;
+    margin-left: 60px;
+   border-radius: 50%;
+}
+
+.lowerAbout{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 10%;
+
+@include mobile{
+    h1 {
+        font-size: 18px;    
+    }
+    p {
+        font-size: 14px;
+    }
+            }
+
+.left{
+    flex: 0.5;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+    .imgContainer{
+        width: 300px;
+        height: 300px;
+        margin-top: 50px;
+        left: 45%;
+        margin-bottom: auto;
+
+        @include mobile{
+            width: 180px;
+            height: 180px;
+            margin-left: 8%;
+            }
+
+        .picOfMe{
+            height: 95%;
+            background-color: #6C6;
+            clip-path: polygon(25% 0, 75% 0%, 100% 38%, 75% 76%, 25% 76%, 0 38%);
+                }
+       
+            }
+    }  
+
+        .right{
+            flex: 0.5;
+            overflow: hidden;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+
+            .description{
+                width: 100%;
+                height: 100%;
+                width: 350px;
+                margin-top: 50px;
+                @include mobile{
+                width: 150px;
+                margin-right: 8%;
+                p{
+                    font-size: 12px
+                }
+            }
+            }
+        }
+
+}
+
+p{
+    font-weight: 300;
+    font-size: 1.2em;
+}
+
+.cardtitle{
+    font-weight: 400;
+}
+
+@media only screen and (max-width: 1120px) {
+
+  .card{
+     h1 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 16px;
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+
+    }
+    .imgContainer{
+        width: 200px;
+        height: 200px;
+    } 
+    
+}
+
+@include mobile{
+    .card{
+        margin-top: 15px;
+            h1 {
+                font-size: 16px;
+            }
+            p {
+                font-size: 12px;
+            }
+        } 
+}

@@ -1,0 +1,95 @@
+@import "../../global.scss";
+
+.navbar{
+    width: 100%;
+    height: 60px;
+    background-color: $NavbarBgColor;
+    color: $mainColor;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    transition: all 0.5s ease;
+
+    .wrapper{
+        padding: 10px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    
+
+
+    .left{
+        display: flex;
+        align-items: center;
+
+            .logo{
+                font-size: 30px;
+                text-decoration: none;
+                color: inherit;
+                font-weight: 700;
+                margin-right: 30px;
+                transition: all 0.5s ease;
+            }
+
+            .logo:hover{
+                color: rgb(57, 192, 255);
+                transition: all 0.5s ease;
+            }
+            .itemContainer{
+                display: flex;
+                align-items: center;
+                margin-right: 30px;
+                transition: all 0.5s ease;
+                 @include mobile{
+                display: none;
+                }
+
+                .icon{
+                    font-size: 20px;
+                    margin-right: 5px;
+                }
+                span{
+                    font-size: 18px;
+                    font-weight: 400;
+                }
+            }
+    }
+        .right{
+            .dropNavMenu{
+                width: 32px;
+                height: 25px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                cursor: pointer;
+
+                span{
+                    width: 100%;
+                    height: 3px;
+                    background-color: $mainColor;
+                    transform-origin: left;
+                    transition: all 0.7s ease;
+                }
+            }
+        }
+    }
+    &.active{
+        background-color: $mainColor;
+        color: $NavbarBgColor;
+        .dropNavMenu{
+            span{
+                &:first-child{
+                    background-color: $NavbarBgColor;
+                    transform: rotate(45deg);
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+                &:last-child{
+                    background-color: $NavbarBgColor;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+}

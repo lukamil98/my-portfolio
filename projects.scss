@@ -1,0 +1,111 @@
+@import "../../global.scss";
+
+main {
+    background-color: aliceblue;
+    color: $mainColor;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    display: block;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    top: 10%;
+    display: flex;
+    overflow: hidden;
+}
+
+.project img {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    text-align: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.project {
+  margin-bottom: 5rem;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  margin-left: 3%;
+  margin-right: 3%;
+
+}
+
+.titleprojects {
+    text-align: center;
+    justify-content: center;
+    text-decoration: underline;
+    position: inherit;
+}
+
+.aboutProject{
+    position:relative;
+    p {
+        width: 300px;
+    }
+
+    .h4{
+        font-size: 1.6rem;
+    }
+}
+
+
+@media only screen and (max-width: 1120px) {
+    .aboutProject {
+        .h4 {
+            font-size: 1.2rem;
+        }
+        p {
+        width: 250px;
+        font-size: 12px;
+    }
+    }
+
+    .project {
+        margin-left: 3%;
+    margin-right: 3%;
+    }
+    .project img{
+        height: 200px;
+        width: 200px;
+    }
+
+}
+
+@include mobile{
+    .container {
+        top: 5%;
+        flex-direction: column;
+    }
+    .project img{
+        height: 8rem;
+        width: 8rem;
+        float: left;
+        align-items: center;
+        position: relative;
+    }
+
+    .project {
+        margin-bottom: 5%;
+        position: relative;
+    }
+
+    .aboutProject {
+            display: block;
+            .h4 {
+            font-size: 1rem;
+        }
+        p {
+        width: 100%;
+        font-size: 1rem;
+    }
+    }
+    
+}
